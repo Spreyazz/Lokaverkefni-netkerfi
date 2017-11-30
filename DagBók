@@ -3,4 +3,4 @@
 ætlum í dag að vinna í switcunum port security komið :D fyrsta nothæfa ip 192.168.99.1    :    síðasta nothæfa: 192.168.99.254
 brodcast address: 192.168.99.255
 subnetmask: 255.255.255.0
-ip úr router: R_varda er 192.168.98.1 til 192.168.98.14
+ip úr router: R_varda er 192.168.98.1 til 192.168.98.14 255.255.255.240
