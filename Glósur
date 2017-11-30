@@ -59,3 +59,16 @@ Switch(config-vlan)#vlan 627
 Switch(config-vlan)#vlan 628
 Switch(config-vlan)#vlan 629
 Switch(config-vlan)#do sh ip int b
+
+
+það sem við settum í önnur hæð til að fá connections : 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int f0/24
+Switch(config-if)#sw m t
+Switch(config-if)#no sw po
+Switch(config-if)#end
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+  
+Switch#
+Switch#reload
