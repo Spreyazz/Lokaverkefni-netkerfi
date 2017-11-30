@@ -1,0 +1,61 @@
+
+R_varda>
+R_varda>ena
+Password: 
+R_varda#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R_varda(config)#int g2/0
+R_varda(config-if)#int g2/0.600
+R_varda(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet2/0.600, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet2/0.600, changed state to up
+enc
+R_varda(config-subif)#encapsulation d
+R_varda(config-subif)#encapsulation dot1Q 600 ?
+  native  Make this as native vlan
+  <cr>
+R_varda(config-subif)#encapsulation dot1Q 600
+R_varda(config-subif)#ip add 10.0.100.1 255.255.255.0
+R_varda(config-subif)#int g2/0.620
+R_varda(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet2/0.620, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet2/0.620, changed state to up
+ip add 10.0.20.1 255.255.255.0
+
+% Configuring IP routing on a LAN subinterface is only allowed if that
+subinterface is already configured as part of an IEEE 802.10, IEEE 802.1Q,
+or ISL vLAN.
+
+R_varda(config-subif)#encapsulation dot1Q 620
+R_varda(config-subif)#ip add 10.0.20.1 255.255.255.0
+R_varda(config-subif)#encapsulation dot1Q 621
+R_varda(config-subif)#encapsulation dot1Q 620
+R_varda(config-subif)#int g2/0.621
+R_varda(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet2/0.621, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet2/0.621, changed state to up
+
+R_varda(config-subif)#encapsulation dot1Q 621
+R_varda(config-subif)#ip add 10.0.21.1 255.255.255.0
+R_varda(config-subif)#
+
+
+
+
+
+
+switch:
+
+Switch(config)#vlan 620
+Switch(config-vlan)#name S620
+Switch(config-vlan)#vlan 621
+Switch(config-vlan)#vlan 600
+Switch(config-vlan)#name kennarar
+Switch(config-vlan)#vlan 626
+Switch(config-vlan)#vlan 627
+Switch(config-vlan)#vlan 628
+Switch(config-vlan)#vlan 629
+Switch(config-vlan)#do sh ip int b
