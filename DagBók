@@ -4,3 +4,6 @@
 brodcast address: 192.168.99.255
 subnetmask: 255.255.255.0
 ip úr router: R_varda er 192.168.98.1 til 192.168.98.14 255.255.255.240
+
+
+virkar ekki að pinga við erum blanko gitið hans eyþórs vill aldrei pusha svo við notum þetta saman
